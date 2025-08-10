@@ -1,0 +1,117 @@
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --primary-color: #0066cc;
+    --card-bg: white;
+}
+
+body.dark-mode {
+    --bg-color: #111;
+    --text-color: #eee;
+    --primary-color: #00ccff;
+    --card-bg: #1e1e1e;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--card-bg);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, var(--primary-color), #00ccff);
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    background: var(--card-bg);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+    background-color: var(--card-bg);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
